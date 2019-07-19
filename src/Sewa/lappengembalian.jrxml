@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="86397226-b863-4ef4-b369-24bbccc64b5f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pengembalian]]>
+	</queryString>
+	<field name="id_pengembalian" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_peminjam" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_petugas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_penyewa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_kamera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="merk_kamera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jaminan_pinjam" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_pinjam" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_kembali" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lama_sewa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_sewa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="denda" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id_pengembalian">
+		<groupExpression><![CDATA[$F{id_pengembalian}]]></groupExpression>
+	</group>
+	<group name="id_peminjam">
+		<groupExpression><![CDATA[$F{id_peminjam}]]></groupExpression>
+	</group>
+	<group name="id_petugas">
+		<groupExpression><![CDATA[$F{id_petugas}]]></groupExpression>
+	</group>
+	<group name="id_penyewa">
+		<groupExpression><![CDATA[$F{id_penyewa}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="221" y="0" width="362" height="37" uuid="0b88b334-ddb6-42d6-b641-f656ca3a25db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PENGEMBALIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="37" width="205" height="37" uuid="ae6f5046-ed91-4a7c-b46c-6cf3c8de48b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RENTAL KAMERA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="32" height="20" uuid="e4dc9299-537c-4b43-918a-c00533d62bc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="41" width="113" height="20" uuid="ce9d2408-f0c0-430a-a2a2-1c3fba69b0a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PENGEMBALIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="41" width="84" height="20" uuid="3760db30-8f41-4e96-bd13-f0ad8d4ea0b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PEMINJAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="41" width="68" height="20" uuid="2d5bd8cc-7c4d-4c36-9995-f099aef2f6fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="41" width="137" height="20" uuid="9e8581ac-1074-4423-b302-92883b34a6d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MERK KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="41" width="78" height="20" uuid="11266b14-7273-401f-a658-eafd513173e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAMA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="41" width="86" height="20" uuid="095e1345-6e11-4ba5-b91c-1c2230eaa81b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="598" y="41" width="83" height="20" uuid="bc7d31f0-6377-4e49-a192-d352c1c9ea6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DENDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="41" width="113" height="20" uuid="edc096a2-780e-4b74-851c-a58a90e24ab2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL BAYAR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="32" height="20" uuid="12addff3-30f9-46ed-9ebb-cf6c00b94a5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="32" y="0" width="113" height="20" uuid="21265dec-21cd-40b7-931a-1d7c466329f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_pengembalian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="0" width="84" height="20" uuid="c9abe356-7674-4766-a84a-ea0d8cb98386"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_peminjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="0" width="68" height="20" uuid="f3cc7be3-4c4d-4c85-a99e-f2a8a1d56fe4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="0" width="137" height="20" uuid="e276b3b9-c435-4482-b10e-0a29bac6b10a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{merk_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="78" height="20" uuid="ecc3144e-9631-44e3-b685-19ed2db97a32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lama_sewa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="0" width="86" height="20" uuid="86cb798a-8860-4a7e-8c12-b54c1b3fb36d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{harga_sewa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="598" y="0" width="83" height="20" uuid="5d3c1eea-8a56-4e3d-8108-0914f75a5bb3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{denda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="0" width="113" height="20" uuid="0a4472c0-36f6-4976-8055-596cdd089a75"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{total_bayar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

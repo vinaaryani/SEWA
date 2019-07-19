@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f5707e2-ca78-400b-9605-718d79f6848c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from produk]]>
+	</queryString>
+	<field name="id_kamera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="merk_kamera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kamera" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_sewa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="id_kamera">
+		<groupExpression><![CDATA[$F{id_kamera}]]></groupExpression>
+	</group>
+	<group name="merk_kamera">
+		<groupExpression><![CDATA[$F{merk_kamera}]]></groupExpression>
+	</group>
+	<group name="jenis_kamera">
+		<groupExpression><![CDATA[$F{jenis_kamera}]]></groupExpression>
+	</group>
+	<group name="harga_sewa">
+		<groupExpression><![CDATA[$F{harga_sewa}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="244" y="0" width="280" height="37" uuid="0ef7a0ce-ca5b-481b-84f1-a6da92a82c51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PRODUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="37" width="205" height="37" uuid="9bd83dde-ec5d-44a1-b0da-d2821db432bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RENTAL KAMERA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="113" y="23" width="45" height="20" uuid="5835888c-292f-4ffa-9a12-5dbabf62739b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="23" width="109" height="20" uuid="26052234-3af2-4391-b7bd-a8ba8b94535a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="23" width="92" height="20" uuid="24f546ed-741e-4d4b-b1ed-4b5f4e2ef9e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA SEWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="23" width="156" height="20" uuid="7c853aed-27b0-479c-a5f0-d007a1664c44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MERK KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="23" width="92" height="20" uuid="76d79684-6494-4950-b17e-e6e7249c916e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID KAMERA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="113" y="0" width="45" height="20" uuid="a64bfa6d-1aee-474c-94cd-46f030e5f650"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="92" height="20" uuid="b1cc9b87-b934-44c2-bd15-20b5b6c8a12f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="156" height="20" uuid="946389cb-5896-4b50-94a2-b18d032903d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{merk_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="109" height="20" uuid="9efb72bb-bae6-443d-8e4e-0ba55c29d68f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jenis_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="515" y="0" width="92" height="20" uuid="d78fe144-3263-4b65-82c5-e0d5011d00da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{harga_sewa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
